@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 3</title>
+</head>
+<body>
+    <h1>Practice 3</h1>
+    <p>Để hoàn thành môn học, học viên CodeGym phải tham gia tối thiểu tổng 75% tổng số buổi học. 
+        Viết CT nhập vào tổng số buổi của khoá học và số buổi mà học viên đã tham gia.
+        Kiểm tra xem học viên đã tham gia tối thiểu 75% số buổi học hay chưa.
+        Nếu có, in ra "true", ngược lại, in ra "false".
+    </p>
+    <script>
+        let tong = parseInt(prompt(" Nhập vào tổng số buổi khoá học: "));
+        let sobuoi = parseInt(prompt(" Nhập vào số buổi học viên đã tham gia:"));
+        let a = (sobuoi / tong) * 100;
+        alert(`Phần trăm tham gia buổi học: ${a}`);
+        alert(`Result: ${a >= 75}`);
+        
+    </script>
+</body>
+</html>
