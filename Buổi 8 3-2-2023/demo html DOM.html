@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo HTML DOM</title>
+</head>
+<body>
+    <h1 id="title">Demo HTML DOM</h1>
+    <p id="paragraph">This is a paragraph.</p>
+    <ul id="list-Lesson">
+        <li>Lesson 6 - Variable, Data Type and Operator</li>
+        <li>Lesson 7 - Practice Variable, Data Type and Operator</li>
+    </ul>
+    <script>
+       let titleElement = document.getElementById("title");//tìm kiếm các element trong HTML và trả về ele có id được chỉ định
+       console.log(titleElement);
+       console.log(titleElement.innerHTML);
+        // Sửa Demo HTML DOM thành Lesson 8 - Demo HTML DOM
+       titleElement.innerHTML = "Lesson 8 - Demo HTML DOM";
+    //    With HTML DOM, we can change the content of a HTML tag
+    let paragraphElement = document.getElementById("paragraph");
+    console.log(paragraphElement);
+    console.log(paragraphElement.innerHTML);
+    paragraphElement.innerHTML = "With HTML DOM, we can change the content of a HTML tag";
+    // change text color of h1 tag
+    titleElement.style.color = "blue";
+    // change background color of the paragraph tag
+    paragraphElement.style.backgroundColor = "green";
+
+    // add newv'li" element to "ul" element
+    let listLessonElement = document.getElementById("list-Lesson");
+    let newListItemElement =  document.createElement("li");
+    newListItemElement.innerHTML = "Lesson 8 - HTML DOM";
+    console.log(" New list item element");
+    console.log(newListItemElement);
+    listLessonElement.appendChild(newListItemElement);
+    // remove paragraph element
+    paragraphElement.remove();
+
+
+    </script>
+</body>
+</html>
