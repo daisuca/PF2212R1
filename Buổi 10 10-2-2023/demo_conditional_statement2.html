@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        Month: <input id="month" type="text">
+        <button id="btn-action" type="button">Submit</button>
+    </form>
+    <script>
+        let btnAction = document.getElementById("btn-action");
+      btnAction.addEventListener("click", () => {
+        let month = parseFloat(document.getElementById("month").value);
+
+        if (month ==1 || month == 3 || month ==5 || month == 7 || month ==8 || month == 10 || month == 12) {
+            console.log(`Tháng ${month} có 31 ngày`);
+        } else if (month == 4 || month == 9 || month == 11) {
+            console.log(`Tháng ${month} có 30 ngày`);
+        } else if (month ==2) {
+            console.log(`Tháng 2 có 28 ngày`);
+        } else {
+            alert("Vui lòng nhập số tháng từ 1 đến 12");
+        }
+        
+      });
+    </script>
+</body>
+</html>
