@@ -9,14 +9,14 @@
 <body>
     <form action="#">
         Mark: <input id="mark" type="text">
-        <button id="btn-mark">Submit</button>
+        <button id="btn-mark" type="button">Submit</button>
     </form>
     <script>
         let btnMark = document.getElementById("btn-mark");
       btnMark.addEventListener("click", () => {
-        let Mark = document.getElementById("mark");
+        let Mark = document.getElementById("mark").value;
 
-        if (Mark.value >= 8.5) {
+        if (parseFloat(Mark) >= 8.5) {
             console.log("Bạn được tuyển thẳng");
         } else {
             console.log("Bạn chưa đủ điểm");
